@@ -1,0 +1,25 @@
+const http = require('http')
+
+const url = "http://api.weatherstack.com/current?access_key=f53ed14bb7d8fbe24f042c5e6d1dc89b&query=45,-75"
+
+const request = http.request(url, (response)=>{
+let data = ""
+
+response.on('data', (chunk)=>{
+//will fire when data comes in and can happen one time or multiple time
+
+data = data + chunk.toString()
+  console.log(data)
+}) 
+
+response.on('end',()=>{
+const body = JSON.parse(data)
+  console.log(body.current.temperature)
+})
+//handler there are few instances for which we can register handler data
+})
+
+response.on('error',(error)=>{
+  console.log(error)
+})
+request.end()
