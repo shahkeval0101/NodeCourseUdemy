@@ -12,7 +12,7 @@ data = data + chunk.toString()
   console.log(data)
 }) 
 
-response.on('end',()=>{
+response.on('end',()=>{//only once
 const body = JSON.parse(data)
   console.log(body.current.temperature)
 })
