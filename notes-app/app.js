@@ -1,5 +1,6 @@
 const fs = require('fs')
 const notes = require('./notes.js')
+const chalk = require('chalk')
 
 // // fs.writeFileSync('notes.txt','This file was created by node.js, my name is keval!')
 // fs.appendFileSync('notes.txt','This is second line in node.js')
@@ -18,7 +19,6 @@ const notes = require('./notes.js')
 // console.log(validator.isEmail('foo@bar.com')) //=> true
 // console.log(validator.isURL('https://google.io'))
 
-const chalk = require('chalk')
 // console.log(chalk.green.bold.underline.strikethrough.inverse("success"))
 
 

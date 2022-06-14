@@ -27,7 +27,7 @@ const saveNote = (notes)=>{
 const loadNotes = ()=>{
     try{
         const dataBuffer = fs.readFileSync('notes.json')
-        const dataJSON = dataBuffer.toString()
+        const dataJSON = dataBuffer.toString()//read file needs tostring conversion to display ---refer playground
         return JSON.parse(dataJSON)
     }catch(e){
         return []
